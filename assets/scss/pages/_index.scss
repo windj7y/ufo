@@ -1,0 +1,9 @@
+.bg-video {
+  height: 600px;
+  background: url(../images/index/main-vision-sm.jpg) no-repeat center / cover;
+
+  @include media-breakpoint-up(md) {
+    height: 664px;
+    background-image: url(../images/index/main-vision.jpg);
+  }
+}

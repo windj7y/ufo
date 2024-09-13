@@ -1,0 +1,9 @@
+.btn-brand-primary {
+  &:hover {
+    background: $brand-500;
+  }
+
+  &:active {
+    background: $brand-700;
+  }
+}
