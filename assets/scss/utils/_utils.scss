@@ -1,0 +1,37 @@
+.line {
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 1px;
+    height: 14px;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    background-color: $gray-scale-300;
+  }
+}
+
+.multiline-ellipsis { 
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@include media-breakpoint-up(sm) {
+  .text-sm-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

@@ -7,3 +7,148 @@
     background-image: url(../images/index/main-vision.jpg);
   }
 }
+
+.bg {
+  height: 547px;
+  background: url(../images/index/illustration3-sm.svg) no-repeat center;
+
+  @include media-breakpoint-up(sm) {
+    background-position-y: 16px;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 480px;
+    background-image: url(../images/index/illustration3.svg);
+    background-position-y: bottom;
+    background-size: contain;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 520px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 604px;
+  }
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+
+  &-lg {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+.portrait {
+  width: 28px;
+  height: 28px;
+
+  @include media-breakpoint-up(lg) {
+    width: 44px;
+    height: 44px;
+  }
+
+  &-sm {
+    width: 24px;
+    height: 24px;
+  }
+
+  &-lg {
+    width: 32px;
+    height: 32px;
+
+    @include media-breakpoint-up(lg) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.bg-teacher {
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 294px;
+    background: url(../images/index/bg-teacher.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 32px;
+    z-index: -1;
+  }
+}
+
+.bg-teacher-video {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba($black, 0.4) 0%, rgba($black, 0.2) 50%, rgba($black, 0.4) 100%), 
+                linear-gradient(180deg, rgba($black, 0) 0%, rgba($black, 0.3) 50%, rgba($black, 0.4) 100%);
+    border-radius: 32px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .bg-ufo {
+    height: 100%;
+    background: url(../assets/images/index/bg-ufo.png) no-repeat top center;
+  }
+}
+
+.bg-ufo-sm {
+  height: 100%;
+  background: url(../assets/images/index/bg-ufo-sm.png) no-repeat center / cover;
+
+  @include media-breakpoint-up(md) {
+    background: url(../assets/images/index/bg-ufo.png) no-repeat top right / cover;
+    margin: 0 -24px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    background: none;
+  }
+}
+
+.bg-ufo-2 {
+  position: relative;
+  z-index: 0;
+
+
+  @include media-breakpoint-up(lg) {
+    &::before {
+      content: '';
+      width: 755px;
+      height: 851px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url(../assets/images/index/illustration1.svg) no-repeat;
+      margin-top: -120px;
+      margin-right: -75px;
+      z-index: -1;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &::before {
+      content: '';
+      width: 955px;
+      margin-top: -112px;
+      margin-right: -152px;
+    }
+  }
+}

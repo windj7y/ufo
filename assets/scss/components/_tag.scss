@@ -1,0 +1,49 @@
+.tag {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.1;
+  padding: 8px;
+  border-radius: 16px;
+
+  &-lg {
+    padding: 8px 16px;
+    font-weight: $font-weight-semibold;
+  }
+
+  &-brand-primary {
+    color: $brand-600;
+    background: $brand-50;
+  }
+
+  &-secondary {
+    color: $secondary;
+    background: $gray-scale-75;
+  }
+
+  &-secondary-500 {
+    color: $secondary-500;
+    background: $secondary-50;
+  }
+
+  &-primary {
+    color: $primary;
+    background: $secondary-200;
+  }
+
+  &-brand-200 {
+    color: $brand-200;
+    background: $brand-dark-transparent-600;
+    border: 1px solid $brand-200;
+  }
+
+  &-inverse {
+    color: $gray-scale-50;
+    background: $gray-transparent-500;
+    border: 1px solid $gray-scale-400;
+
+    &-brand {
+      color:  $gray-scale-50;
+      background: $brand-600;
+    }
+  }
+}

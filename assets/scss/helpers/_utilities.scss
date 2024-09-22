@@ -74,6 +74,7 @@ $utilities: map-merge(
     // scss-docs-end utils-display
     // scss-docs-start utils-shadow
     "shadow": (
+      responsive: true,
       property: box-shadow,
       class: shadow,
       values: (
@@ -108,6 +109,7 @@ $utilities: map-merge(
       values: $position-values
     ),
     "bottom": (
+      responsive: true,
       property: bottom,
       values: $position-values
     ),
@@ -202,13 +204,22 @@ $utilities: map-merge(
     // Sizing utilities
     // scss-docs-start utils-sizing
     "width": (
+      responsive: true,
       property: width,
       class: w,
       values: (
         25: 25%,
+        33: 33%,
+        42: 42%,
         50: 50%,
         75: 75%,
         100: 100%,
+        118p: 118px,
+        207p: 207px,
+        288p: 288px,
+        292p: 292px,
+        354p: 354px,
+        549p: 549px,
         auto: auto
       )
     ),
@@ -228,6 +239,7 @@ $utilities: map-merge(
       values: (100: 100vw)
     ),
     "height": (
+      responsive: true,
       property: height,
       class: h,
       values: (
@@ -235,6 +247,9 @@ $utilities: map-merge(
         50: 50%,
         75: 75%,
         100: 100%,
+        174p: 174px,
+        216p: 216px,
+        392p: 392px,
         auto: auto
       )
     ),
@@ -523,6 +538,7 @@ $utilities: map-merge(
       values: italic normal
     ),
     "font-weight": (
+      responsive: true,
       property: font-weight,
       class: fw,
       values: (
@@ -544,6 +560,14 @@ $utilities: map-merge(
         sm: $line-height-sm,
         base: $line-height-base,
         lg: $line-height-lg,
+      )
+    ),
+    "letter-spacing": (
+      property: letter-spacing,
+      class: ls,
+      values: (
+        1: 1,
+        base: 0.05em,
       )
     ),
     "text-align": (
@@ -582,6 +606,7 @@ $utilities: map-merge(
     // scss-docs-end utils-text
     // scss-docs-start utils-color
     "color": (
+      responsive: true,
       property: color,
       class: text,
       local-vars: (
@@ -668,6 +693,7 @@ $utilities: map-merge(
     // scss-docs-end utils-links
     // scss-docs-start utils-bg-color
     "background-color": (
+      responsive: true,
       property: background-color,
       class: bg,
       local-vars: (
@@ -717,12 +743,13 @@ $utilities: map-merge(
     // scss-docs-end utils-interaction
     // scss-docs-start utils-border-radius
     "rounded": (
+      responsive: true,
       property: border-radius,
       class: rounded,
       values: (
         null: var(--#{$prefix}border-radius),
         0: 0,
-        1: $border-radius-xs,
+        1: $border-radius-xs, // var(--#{$prefix}border-radius-sm),
         2: var(--#{$prefix}border-radius-sm), // var(--#{$prefix}border-radius),
         3: var(--#{$prefix}border-radius), // var(--#{$prefix}border-radius-lg),
         4: var(--#{$prefix}border-radius-lg), // var(--#{$prefix}border-radius-xl),
@@ -734,16 +761,19 @@ $utilities: map-merge(
       )
     ),
     "rounded-top": (
+      responsive: true,
       property: border-top-left-radius border-top-right-radius,
       class: rounded-top,
       values: (
         null: var(--#{$prefix}border-radius),
         0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
+        1: $border-radius-xs, // var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius-sm), // var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius), // var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-lg), // var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-xl), // var(--#{$prefix}border-radius-xxl),
+        6: var(--#{$prefix}border-radius-xxl), //var(--#{$prefix}border-radius-xl),
+        7: $border-radius-3xl,
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
       )
@@ -754,11 +784,13 @@ $utilities: map-merge(
       values: (
         null: var(--#{$prefix}border-radius),
         0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
+        1: $border-radius-xs, // var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius-sm), // var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius), // var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-lg), // var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-xl), // var(--#{$prefix}border-radius-xxl),
+        6: var(--#{$prefix}border-radius-xxl), //var(--#{$prefix}border-radius-xl),
+        7: $border-radius-3xl,
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
       )
@@ -769,26 +801,31 @@ $utilities: map-merge(
       values: (
         null: var(--#{$prefix}border-radius),
         0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
+        1: $border-radius-xs, // var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius-sm), // var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius), // var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-lg), // var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-xl), // var(--#{$prefix}border-radius-xxl),
+        6: var(--#{$prefix}border-radius-xxl), //var(--#{$prefix}border-radius-xl),
+        7: $border-radius-3xl,
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
       )
     ),
     "rounded-start": (
+      responsive: true,
       property: border-bottom-left-radius border-top-left-radius,
       class: rounded-start,
       values: (
         null: var(--#{$prefix}border-radius),
         0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
+        1: $border-radius-xs, // var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius-sm), // var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius), // var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-lg), // var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-xl), // var(--#{$prefix}border-radius-xxl),
+        6: var(--#{$prefix}border-radius-xxl), //var(--#{$prefix}border-radius-xl),
+        7: $border-radius-3xl,
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
       )

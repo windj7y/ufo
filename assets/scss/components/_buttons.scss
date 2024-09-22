@@ -7,3 +7,34 @@
     background: $brand-700;
   }
 }
+
+.btn-round {
+  width: 40px;
+  height: 40px;
+
+  &-xs {
+    width: 32px;
+    height: 32px;
+  }
+
+  &-sm {
+    width: 36px;
+    height: 36px;
+  }
+
+  &-brand-primary {
+    color: $brand-600;
+    background: $white;
+    border-radius: 50%;
+
+    &:hover {
+      color: $white;
+      background: $brand-600;
+    }
+
+    &:active {
+      color: $white;
+      background: $brand-700;
+    }
+  }
+}

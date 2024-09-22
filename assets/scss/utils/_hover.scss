@@ -1,0 +1,23 @@
+.hover-opacity {
+  opacity: 0;
+  transition: all .3s ease;
+
+  & .hover-opacity {
+    opacity: 1;
+  }
+}
+
+.hover {
+  transition: all .3s ease;
+
+  &:hover {
+    & .hover-opacity {
+      opacity: 1;
+    }
+  
+    & .btn-round-brand-primary {
+      color: $white;
+      background: $brand-600;
+    }
+  }
+}

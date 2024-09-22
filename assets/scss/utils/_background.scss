@@ -9,11 +9,17 @@
   }
 
   &dark {
-    background: linear-gradient(180deg, rgba(17, 36, 90, 0.1) 0%, rgba(17, 36, 90, 0.2) 60%, #11245A 80%);
+    background: linear-gradient(180deg, $brand-dark-transparent-0 0%, $brand-dark-transparent-50 60%, $brand-dark-transparent-800 100%);
   }
   
   &gray {
     background: linear-gradient(90deg, rgba($black, 0.4) 0%, rgba($black, 0.2) 50%, rgba($black, 0.4) 100%), 
                 linear-gradient(180deg, rgba($black, 0) 0%, rgba($black, 0.3) 50%, rgba($black, 0.4) 100%);
+  }
+}
+
+.bg-transparent- {
+  &brand-dark-800 {
+    background: $brand-dark-transparent-800;
   }
 }

@@ -1,0 +1,11 @@
+@include media-breakpoint-up(lg) {
+  .shadow-lg {
+    box-shadow: $box-shadow-lg !important;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .shadow-xl {
+    box-shadow: $box-shadow-xl !important;
+  }
+}
