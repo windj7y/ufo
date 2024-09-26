@@ -1,0 +1,168 @@
+.aboutMe {
+  padding-top: 19px;
+  @media (max-width: 500px) {
+    padding-top: 12px;
+  }
+  aside {
+    .personalInfo {
+      padding: 40px 20px;
+    }
+
+    @media (max-width: 500px) {
+      .personalInfo {
+        padding: 32px 48px;
+      }
+    }
+
+    .circle-border {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      padding: 2px;
+      position: relative;
+      background: conic-gradient(#007bff 0% 25%, #b9dcff 25% 100%);
+
+      .badge-number {
+        position: absolute;
+        top: 4px;
+        left: 85%;
+        transform: translateX(-50%);
+        width: 35px;
+        height: 30px;
+        background-color: #1e6bff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .personalRecord {
+      width: 1px;
+      height: 36px;
+    }
+
+    .shareIcon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .pinIcon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+  }
+
+  .custom-shadow-bottom {
+    // box-shadow: 0 4px 6px rgba(30, 107, 255, 0.05);
+  }
+
+  @media (max-width: 1200px) {
+    .custom-shadow-bottom {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
+  main {
+    padding: 0px;
+    @media (max-width: 1200px) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .illustrationBanner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 48px;
+    }
+
+    @media (max-width: 1000px) {
+      .illustrationBanner {
+        padding-top: 32px;
+        padding-left: 12px;
+        padding-right: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .illustrationBanner {
+        align-items: end;
+      }
+    }
+
+    .illustrationBannerImg {
+      width: 356px;
+      height: 242px;
+    }
+
+    @media (max-width: 1000px) {
+      .design {
+        width: 100%;
+      }
+    }
+
+    .aptitude {
+      padding: 40px 48px 42px 48px !important;
+      margin-top: 16px;
+
+      .skillsBtn {
+        width: 120px;
+        height: 44px;
+      }
+    }
+
+    .aptitudeContentAndImg {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 1000px) {
+      .aptitudeContentAndImg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .aptitudeContent {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .navApp {
+    display: none !important;
+  }
+
+  .navWeb {
+    display: block !important;
+  }
+
+  @media (max-width: 1200px) {
+    .navApp {
+      display: block !important;
+    }
+
+    .navWeb {
+      display: none !important;
+    }
+  }
+  .study {
+  }
+}
