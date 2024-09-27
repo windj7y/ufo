@@ -8,6 +8,24 @@
   }
 }
 
+.btn-outline-secondary-500 {
+  &:hover {
+    color: $white;
+  }
+}
+
+:not(.btn-check) + .btn-outline-secondary-500 {
+  &:active {
+    color: $white;
+  }
+}
+
+.btn-outline-gray-scale-50 {
+  &:hover {
+    color: $primary;
+  }
+}
+
 .btn-round {
   width: 40px;
   height: 40px;

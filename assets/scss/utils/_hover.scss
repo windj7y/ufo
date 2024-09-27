@@ -19,5 +19,10 @@
       color: $white;
       background: $brand-600;
     }
+
+    & .btn-outline-gray-scale-50 {
+      color: $primary;
+      background: $white;
+    }
   }
 }
